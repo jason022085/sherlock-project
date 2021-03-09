@@ -33,7 +33,7 @@ def _get_categorical_label_encodings(y_train, y_val, nn_id) -> (list, list):
     encoder = LabelEncoder()
     encoder.fit(y_train)
 
-    np.save(f"../sherlock/deploy/classes_{nn_id}.npy", encoder.classes_)
+    np.save(f"D:/sherlock-project/sherlock/deploy/classes_{nn_id}.npy", encoder.classes_)
 
     # Convert train labels
     y_train_int = encoder.transform(y_train)
